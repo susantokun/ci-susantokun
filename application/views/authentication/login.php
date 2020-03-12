@@ -33,6 +33,16 @@
 	<div id="myalert">
 		<?php echo $this->session->flashdata('alert', true)?>
 	</div>
+	<br>
+	<div class="box box-solid box-info">
+		<div class="box-header">
+				<h3 class="box-title">User Login</h3>
+		</div>
+		<div class="box-body">
+			<b>E-mail</b> : admin@mail.com (administrator) <br>
+			<b>E-mail</b> : member@mail.com (member)<br>
+			<b>Password</b> : password
+	</div> 
 </div>
 
 <script>

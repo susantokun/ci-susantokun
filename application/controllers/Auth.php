@@ -1,17 +1,22 @@
-<?php defined('BASEPATH') or exit('No direct script access allowed');
-#===================================================|
-# Please DO NOT modify this information :			      |
-#---------------------------------------------------|
-# @Author 		: Susantokun
-# @Date 		  : 2018-05-26T18:54:14+07:00
-# @Email 		  : support@susantokun.com
-# @Project 		: CodeIgniter
-# @Filename 	: Auth.php
-# @Instagram 	: susantokun
-# @Website 		: http://www.susantokun.com
-# @Youtube 		: http://youtube.com/susantokun
-# @Last modified time: 2018-05-29T09:53:35+07:00
-#===================================================|
+<?php 
+defined('BASEPATH') or exit('No direct script access allowed');
+
+/*
+ * |==============================================================|
+ * | Please DO NOT modify this information :                      |
+ * |--------------------------------------------------------------|
+ * | Author          : Susantokun
+ * | Email           : admin@susantokun.com
+ * | Filename        : Auth.php
+ * | Instagram       : @susantokun
+ * | Blog            : http://www.susantokun.com
+ * | Info            : http://info.susantokun.com
+ * | Demo            : http://demo.susantokun.com
+ * | Youtube         : http://youtube.com/susantokun
+ * | File Created    : Thursday, 12th March 2020 10:34:33 am
+ * | Last Modified   : Thursday, 12th March 2020 10:57:22 am
+ * |==============================================================|
+ */
 
 class Auth extends MY_Controller
 {
@@ -25,7 +30,6 @@ class Auth extends MY_Controller
     public function profile()
     {
         $data = konfigurasi('Profile', 'Kelola Profile');
-        $data['get_all_userdata'] = $this->Auth_model->get_by_id($this->session->userdata('id'));
         $this->template->load('layout/template', 'authentication/profile', $data);
     }
 
@@ -51,8 +55,8 @@ class Auth extends MY_Controller
 
                 //delete file
                 $user = $this->Auth_model->get_by_id($this->session->userdata('id'));
-                if (file_exists('assets/upload/images/foto_profil/'.$user->photo) && $user->photo) {
-                    unlink('assets/upload/images/foto_profil/'.$user->photo);
+                if (file_exists('assets/uploads/images/foto_profil/'.$user->photo) && $user->photo) {
+                    unlink('assets/uploads/images/foto_profil/'.$user->photo);
                 }
 
                 $data['photo'] = $upload;
@@ -60,7 +64,7 @@ class Auth extends MY_Controller
             $result = $this->Auth_model->update($data, $id);
             if ($result > 0) {
                 $this->updateProfil();
-                $this->session->set_flashdata('msg', show_succ_msg('Data Profile Berhasil diubah, silakan lakukan login ulang!'));
+                $this->session->set_flashdata('msg', show_succ_msg('Data Profil Berhasil diubah'));
                 redirect('auth/profile');
             } else {
                 $this->session->set_flashdata('msg', show_err_msg('Data Profile Gagal diubah'));
@@ -108,7 +112,7 @@ class Auth extends MY_Controller
 
     private function _do_upload()
     {
-        $config['upload_path']          = 'assets/upload/images/foto_profil/';
+        $config['upload_path']          = 'assets/uploads/images/foto_profil/';
         $config['allowed_types']        = 'gif|jpg|png';
         $config['max_size']             = 100; //set max size allowed in Kilobyte
         $config['max_width']            = 1000; // set max width image allowed

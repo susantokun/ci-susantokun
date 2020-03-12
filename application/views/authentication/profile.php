@@ -1,28 +1,28 @@
 <div class="msg" style="display:none;">
-	<?php echo @$this->session->flashdata('msg'); ?>
+    <?= @$this->session->flashdata('msg'); ?>
 </div>
 <div class="row">
 	<div class="col-md-3">
 		<!-- Profile Image -->
 		<div class="box box-primary">
 			<div class="box-body box-profile">
-				<img class="profile-user-img img-responsive img-circle" src="<?php echo base_url('assets/upload/images/foto_profil/'.$this->session->userdata('photo')); ?>" alt="User profile picture">
+				<img class="profile-user-img img-responsive img-circle" src="<?= base_url('assets/uploads/images/foto_profil/'.$userdata->photo); ?>" style="width:125px; height:125px">
 
-				<h3 class="profile-username text-center"><?php echo $this->session->userdata('first_name')?> <?php echo $this->session->userdata('last_name'); ?></h3>
+				<h3 class="profile-username text-center"><?= $userdata->first_name; ?> <?= $userdata->last_name; ?></h3>
 
 				<p class="text-muted text-center">
-					<?php echo $get_all_userdata->name;?>
+					<?= $userdata->name;?>
 				</p>
 
 				<ul class="list-group list-group-unbordered">
 					<li class="list-group-item" style="text-align:center">
-						<b>Username</b><br><a><?php echo $this->session->userdata('username')?></a>
+						<b>Username</b><br><a><?= $userdata->username; ?></a>
 					</li>
 					<li class="list-group-item" style="text-align:center">
-						<b>Tanggal Daftar</b><br><a><?php echo $this->session->userdata('created_on')?></a>
+						<b>Tanggal Daftar</b><br><a><?= tgl_lengkap($userdata->created_on);?></a>
 					</li>
 					<li class="list-group-item" style="text-align:center">
-						<b>Terakhir Login</b><br><a><?php echo $this->session->userdata('last_login')?></a>
+						<b>Terakhir Login</b><br><a><?= tgl_lengkap($userdata->last_login);?></a>
 					</li>
 				</ul>
 			</div>
@@ -41,31 +41,31 @@
 						<div class="form-group">
 							<label class="col-sm-2 control-label">Username</label>
 							<div class="col-sm-10">
-								<input type="text" class="form-control" placeholder="Username" name="username" value="<?php echo $this->session->userdata('username'); ?>">
+								<input type="text" class="form-control" placeholder="Username" name="username" value="<?= $userdata->username; ?>">
 							</div>
 						</div>
 						<div class="form-group">
 							<label class="col-sm-2 control-label">Nama Depan</label>
 							<div class="col-sm-10">
-								<input type="text" class="form-control" placeholder="Nama Depan" name="first_name" value="<?php echo $this->session->userdata('first_name'); ?>">
+								<input type="text" class="form-control" placeholder="Nama Depan" name="first_name" value="<?= $userdata->first_name; ?>">
 							</div>
 						</div>
 						<div class="form-group">
 							<label class="col-sm-2 control-label">Nama Belakang</label>
 							<div class="col-sm-10">
-								<input type="text" class="form-control" placeholder="Nama Belakang" name="last_name" value="<?php echo $this->session->userdata('last_name'); ?>">
+								<input type="text" class="form-control" placeholder="Nama Belakang" name="last_name" value="<?= $userdata->last_name; ?>">
 							</div>
 						</div>
 						<div class="form-group">
 							<label class="col-sm-2 control-label">Email</label>
 							<div class="col-sm-10">
-								<input type="email" class="form-control" placeholder="Email" name="email" value="<?php echo $this->session->userdata('email'); ?>">
+								<input type="email" class="form-control" placeholder="Email" name="email" value="<?= $userdata->email; ?>">
 							</div>
 						</div>
 						<div class="form-group">
 							<label class="col-sm-2 control-label">Telp</label>
 							<div class="col-sm-10">
-								<input type="number" class="form-control" placeholder="Telp" name="phone" value="<?php echo $this->session->userdata('phone'); ?>">
+								<input type="number" class="form-control" placeholder="Telp" name="phone" value="<?= $userdata->phone; ?>">
 							</div>
 						</div>
 						<div class="form-group">

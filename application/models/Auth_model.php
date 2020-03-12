@@ -1,19 +1,22 @@
 <?php
-#===================================================|
-# Please DO NOT modify this information :			      |
-#---------------------------------------------------|
-# @Author 		: Susantokun
-# @Date 		  : 2018-05-26T19:02:15+07:00
-# @Email 		  : support@susantokun.com
-# @Project 		: CodeIgniter
-# @Filename 	: Auth_model.php
-# @Instagram 	: susantokun
-# @Website 		: http://www.susantokun.com
-# @Youtube 		: http://youtube.com/susantokun
-# @Last modified time: 2018-05-28T15:21:20+07:00
-#===================================================|
-
 defined('BASEPATH') or exit('No direct script access allowed');
+
+/*
+ * |==============================================================|
+ * | Please DO NOT modify this information :                      |
+ * |--------------------------------------------------------------|
+ * | Author          : Susantokun
+ * | Email           : admin@susantokun.com
+ * | Filename        : Auth_model.php
+ * | Instagram       : @susantokun
+ * | Blog            : http://www.susantokun.com
+ * | Info            : http://info.susantokun.com
+ * | Demo            : http://demo.susantokun.com
+ * | Youtube         : http://youtube.com/susantokun
+ * | File Created    : Thursday, 12th March 2020 10:34:33 am
+ * | Last Modified   : Thursday, 12th March 2020 10:58:39 am
+ * |==============================================================|
+ */
 
 class Auth_model extends CI_Model
 {
@@ -30,17 +33,19 @@ class Auth_model extends CI_Model
         $this->db->where($this->id, $id);
         $this->db->update($this->table, $data);
         return $this->db->affected_rows();
-    }
-
-    public function get_by_id($id)
+	}
+	
+	public function get_by_id()
     {
+        $id = $this->session->userdata('id');
         $this->db->select('
             tbl_user.*, tbl_role.id AS id_role, tbl_role.name, tbl_role.description,
-            ');
+        ');
         $this->db->join('tbl_role', 'tbl_user.id_role = tbl_role.id');
         $this->db->from($this->table);
         $this->db->where($this->id, $id);
         $query = $this->db->get();
+
         return $query->row();
     }
 

@@ -1,19 +1,22 @@
 <?php
-#===================================================|
-# Please DO NOT modify this information :			      |
-#---------------------------------------------------|
-# @Author 		: Susantokun
-# @Date 		  : 2018-05-26T19:05:28+07:00
-# @Email 		  : support@susantokun.com
-# @Project 		: CodeIgniter
-# @Filename 	: Home.php
-# @Instagram 	: susantokun
-# @Website 		: http://www.susantokun.com
-# @Youtube 		: http://youtube.com/susantokun
-# @Last modified time: 2018-05-29T09:26:25+07:00
-#===================================================|
-
 defined('BASEPATH') or exit('No direct script access allowed');
+
+/*
+ * |==============================================================|
+ * | Please DO NOT modify this information :                      |
+ * |--------------------------------------------------------------|
+ * | Author          : Susantokun
+ * | Email           : admin@susantokun.com
+ * | Filename        : Home.php
+ * | Instagram       : @susantokun
+ * | Blog            : http://www.susantokun.com
+ * | Info            : http://info.susantokun.com
+ * | Demo            : http://demo.susantokun.com
+ * | Youtube         : http://youtube.com/susantokun
+ * | File Created    : Thursday, 12th March 2020 10:34:33 am
+ * | Last Modified   : Thursday, 12th March 2020 10:57:32 am
+ * |==============================================================|
+ */
 
 class Home extends MY_Controller
 {

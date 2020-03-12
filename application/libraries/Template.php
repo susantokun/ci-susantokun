@@ -1,19 +1,22 @@
 <?php
-#===================================================|
-# Please DO NOT modify this information :			      |
-#---------------------------------------------------|
-# @Author 		: Susantokun
-# @Date 		  : 2018-05-26T18:52:54+07:00
-# @Email 		  : support@susantokun.com
-# @Project 		: CodeIgniter
-# @Filename 	: Template.php
-# @Instagram 	: susantokun
-# @Website 		: http://www.susantokun.com
-# @Youtube 		: http://youtube.com/susantokun
-# @Last modified time: 2018-05-27T04:38:00+07:00
-#===================================================|
-
 defined('BASEPATH') or exit('No direct script access allowed');
+
+/*
+ * |==============================================================|
+ * | Please DO NOT modify this information :                      |
+ * |--------------------------------------------------------------|
+ * | Author          : Susantokun
+ * | Email           : admin@susantokun.com
+ * | Filename        : Template.php
+ * | Instagram       : @susantokun
+ * | Blog            : http://www.susantokun.com
+ * | Info            : http://info.susantokun.com
+ * | Demo            : http://demo.susantokun.com
+ * | Youtube         : http://youtube.com/susantokun
+ * | File Created    : Thursday, 12th March 2020 10:34:33 am
+ * | Last Modified   : Thursday, 12th March 2020 10:58:31 am
+ * |==============================================================|
+ */
 
 class Template
 {

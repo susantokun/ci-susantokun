@@ -5,7 +5,7 @@
 	<title>
 		<?php echo $title ?>
 	</title>
-	<link href='<?php echo base_url("assets/upload/images/$favicon"); ?>' rel='shortcut icon' type='image/x-icon' />
+	<link href='<?php echo base_url("assets/uploads/images/$favicon"); ?>' rel='shortcut icon' type='image/x-icon' />
 	<!-- meta -->
 	<?php require_once('_meta.php') ;?>
 

@@ -1,5 +1,5 @@
 <?php
-defined('BASEPATH') or exit('No direct script access allowed');
+defined('BASEPATH') OR exit('No direct script access allowed');
 
 /*
  * |==============================================================|
@@ -7,34 +7,26 @@ defined('BASEPATH') or exit('No direct script access allowed');
  * |--------------------------------------------------------------|
  * | Author          : Susantokun
  * | Email           : admin@susantokun.com
- * | Filename        : Konfigurasi_model.php
+ * | Filename        : login_helper.php
  * | Instagram       : @susantokun
  * | Blog            : http://www.susantokun.com
  * | Info            : http://info.susantokun.com
  * | Demo            : http://demo.susantokun.com
  * | Youtube         : http://youtube.com/susantokun
  * | File Created    : Thursday, 12th March 2020 10:34:33 am
- * | Last Modified   : Thursday, 12th March 2020 10:58:46 am
+ * | Last Modified   : Thursday, 12th March 2020 10:58:00 am
  * |==============================================================|
  */
 
-class Konfigurasi_model extends CI_Model
-{
-    public $table = 'tbl_konfigurasi';
-    public $id = 'id_konfigurasi';
-    public $order = 'DESC';
+if(!function_exists('get_hash')){
+    function get_hash($PlainPassword){
+        $option=['cost'=>5];
+    	return password_hash($PlainPassword, PASSWORD_DEFAULT, $option);
+   }
+}
 
-    function __construct()
-    {
-        parent::__construct();
-    }
-
-    // Listing Konfigurasi
-    public function listing() {
-        $this->db->select('*');
-        $this->db->from('tbl_konfigurasi');
-        $query = $this->db->get();
-        return $query->row_array();
-    }
-
+if(!function_exists('hash_verified')){
+    function hash_verified($PlainPassword,$HashPassword){
+    	return password_verify($PlainPassword,$HashPassword) ? true : false;
+   }
 }

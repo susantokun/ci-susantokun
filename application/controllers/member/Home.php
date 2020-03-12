@@ -1,19 +1,22 @@
 <?php
-#===================================================|
-# Please DO NOT modify this information :			      |
-#---------------------------------------------------|
-# @Author 		: Susantokun
-# @Date 		  : 2018-05-26T19:05:28+07:00
-# @Email 		  : support@susantokun.com
-# @Project 		: CodeIgniter
-# @Filename 	: Home.php
-# @Instagram 	: susantokun
-# @Website 		: http://www.susantokun.com
-# @Youtube 		: http://youtube.com/susantokun
-# @Last modified time: 2018-05-27T04:36:46+07:00
-#===================================================|
-
 defined('BASEPATH') or exit('No direct script access allowed');
+
+/*
+ * |==============================================================|
+ * | Please DO NOT modify this information :                      |
+ * |--------------------------------------------------------------|
+ * | Author          : Susantokun
+ * | Email           : admin@susantokun.com
+ * | Filename        : Home.php
+ * | Instagram       : @susantokun
+ * | Blog            : http://www.susantokun.com
+ * | Info            : http://info.susantokun.com
+ * | Demo            : http://demo.susantokun.com
+ * | Youtube         : http://youtube.com/susantokun
+ * | File Created    : Thursday, 12th March 2020 10:34:33 am
+ * | Last Modified   : Thursday, 12th March 2020 10:57:41 am
+ * |==============================================================|
+ */
 
 class Home extends MY_Controller
 {
@@ -28,12 +31,7 @@ class Home extends MY_Controller
 
     public function index()
     {
-        $site = $this->Konfigurasi_model->listing();
-        $data = array(
-            'title'     => 'Dashboard | '.$site['nama_website'],
-            'favicon'   => $site['favicon'],
-            'site'      => $site
-        );
+		$data = konfigurasi('Dashboard');
         $this->template->load('layout/template', 'member/dashboard', $data);
     }
 }
