@@ -56,7 +56,7 @@ class Auth_model extends CI_Model
         'username' => $this->input->post('username'),
         'email' => $this->input->post('email'),
         'id_role' => '2',
-        'created_on' => date('Y-m-d H:i:s'),
+        'created_at' => date('Y-m-d H:i:s'),
         'password' => get_hash($this->input->post('password'))
       );
       return $this->db->insert($this->table, $data);
@@ -79,7 +79,7 @@ class Auth_model extends CI_Model
             return 1;
         }
         //jika bernilai 2 maka user tidak aktif
-        if ($query->active == 0) {
+        if ($query->activated == 0) {
             return 2;
         }
         //jika bernilai 3 maka password salah

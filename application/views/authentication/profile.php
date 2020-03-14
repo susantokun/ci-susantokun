@@ -19,7 +19,7 @@
 						<b>Username</b><br><a><?= $userdata->username; ?></a>
 					</li>
 					<li class="list-group-item" style="text-align:center">
-						<b>Tanggal Daftar</b><br><a><?= tgl_lengkap($userdata->created_on);?></a>
+						<b>Tanggal Daftar</b><br><a><?= tgl_lengkap($userdata->created_at);?></a>
 					</li>
 					<li class="list-group-item" style="text-align:center">
 						<b>Terakhir Login</b><br><a><?= tgl_lengkap($userdata->last_login);?></a>

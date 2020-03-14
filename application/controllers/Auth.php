@@ -212,8 +212,9 @@ class Auth extends MY_Controller
               'email'       => $query->email,
               'phone'       => $query->phone,
               'photo'       => $query->photo,
-              'created_on'  => $query->created_on,
-              'last_login'  => $query->last_login
+              'last_login'  => $query->last_login,
+              'created_at'  => $query->created_at,
+              'updated_at'  => $query->updated_at,
             );
             $this->session->set_userdata($userdata);
             return true;
