@@ -6,6 +6,8 @@
 - Meningkatkan ke CodeIgniter 3.1.11
 - Penambahan Database
 - Memperbaiki upload profil yang tidak langsung terganti
+- Notifikasi saat berhasil keluar
+- Mencatat waktu terakhir masuk (last login)
 
 #### Version 1.1
 - Memperbaiki Code
