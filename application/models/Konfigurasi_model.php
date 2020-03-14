@@ -32,7 +32,7 @@ class Konfigurasi_model extends CI_Model
     // Listing Konfigurasi
     public function listing() {
         $this->db->select('*');
-        $this->db->from('tbl_konfigurasi');
+        $this->db->from($this->table);
         $query = $this->db->get();
         return $query->row_array();
     }
