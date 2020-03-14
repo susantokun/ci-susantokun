@@ -1,10 +1,9 @@
 <footer class="main-footer">
 	<div class="pull-right hidden-xs">
 		<?php if (ENVIRONMENT=='development'): ?>
-		<p class="pull-right text-muted">
-			CI Version: <strong><?php echo CI_VERSION; ?></strong>, Elapsed Time: <strong>{elapsed_time}</strong> seconds, Memory Usage: <strong>{memory_usage}</strong>
-		</p>
+		<b>CodeIgniter</b> <?php echo CI_VERSION; ?>
+		<b>AdminLTE</b> 2.4.3
 		<?php endif; ?>
 	</div>
-	<strong>Copyright &copy; <?php echo date('Y'); ?> <a href="https://susantokun.com">SUSANTOKUN</a></strong> All rights reserved.
+	<strong>Copyright &copy; 2014-2019 <a href="https://adminlte.io">AdminLTE</a>.</strong> All rights reserved.
 </footer>
