@@ -4,9 +4,6 @@
 	</div>
 
 	<div class="register-box-body">
-		<font color="green">
-			<?php echo $this->session->flashdata('pesan'); ?>
-		</font>
 		<p class="login-box-msg">Register a new membership</p>
 		<?php echo form_open('auth/check_register','') ;?>
 		<div class="form-group has-feedback">

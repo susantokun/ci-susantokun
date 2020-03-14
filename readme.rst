@@ -3,9 +3,13 @@ CodeIgniter SUSANTOKUN
 
 Update Versions
 ------------------------------------------------------------
+- Version 1.2
+ - Meningkatkan ke CodeIgniter 3.1.11
+ - Penambahan Database
+ - Memperbaiki upload profil yang tidak langsung terganti
 
-- Version 2.0
- - Commingsoon
+- Version 1.1
+ - Memperbaiki Code
 
 - Version 1.0
  - Login, Register, Update Profile di CodeIgniter
@@ -29,6 +33,16 @@ User Login
 - E-mail    : member@mail.com (member)
 - Password  : password
 
-Github, Youtube, Live Demo, Database dan Tutorial Lengkap
+More
 ------------------------------------------------------------
-- http://demo.susantokun.com/
+Follow Me :
+- Github https://github.com/susantokun
+- Instagram https://www.instagram.com/susantokun
+- Youtube https://www.youtube.com/susantokun
+- Blog https://www.susantokun.com
+
+Other :
+- Info https://info.susantokun.com
+- Demo https://demo.susantokun.com
+- Paypal https://www.paypal.me/susantokun
+- Email admin@susantokun.com
