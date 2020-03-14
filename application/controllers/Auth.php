@@ -30,7 +30,7 @@ class Auth extends MY_Controller
     public function profile()
     {
         $data = konfigurasi('Profile', 'Kelola Profile');
-        $this->template->load('layout/template', 'authentication/profile', $data);
+        $this->template->load('layouts/template', 'authentication/profile', $data);
     }
 
     public function updateProfile()
@@ -130,7 +130,7 @@ class Auth extends MY_Controller
     public function register()
     {
         $data = konfigurasi('Register');
-        $this->template->load('authentication/layout/template', 'authentication/register', $data);
+        $this->template->load('authentication/layouts/template', 'authentication/register', $data);
     }
 
     public function check_register()
@@ -246,10 +246,10 @@ class Auth extends MY_Controller
                     redirect('member/home');
                 }
             } else {
-                $this->template->load('authentication/layout/template', 'authentication/login', $data);
+                $this->template->load('authentication/layouts/template', 'authentication/login', $data);
             }
         } else {
-            $this->template->load('authentication/layout/template', 'authentication/login', $data);
+            $this->template->load('authentication/layouts/template', 'authentication/login', $data);
         }
     }
     public function logout()

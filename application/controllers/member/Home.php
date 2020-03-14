@@ -32,6 +32,6 @@ class Home extends MY_Controller
     public function index()
     {
 		$data = konfigurasi('Dashboard');
-        $this->template->load('layout/template', 'member/dashboard', $data);
+        $this->template->load('layouts/template', 'member/dashboard', $data);
     }
 }
