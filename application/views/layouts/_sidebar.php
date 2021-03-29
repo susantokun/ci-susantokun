@@ -7,7 +7,7 @@
     <!-- Sidebar user panel (optional) -->
     <div class="user-panel">
       <div class="pull-left image">
-				<img src="<?php echo base_url('assets/uploads/images/foto_profil/'.$userdata->photo); ?>" class="img-circle">
+				<img src="<?php echo base_url('assets/uploads/images/foto_profil/' . $userdata->photo); ?>" class="img-circle">
 			</div>
       <div class="pull-left info">
         <p><?php echo $this->session->userdata('username')?></p>
@@ -33,6 +33,7 @@
       <li class="header">HEADER</li>
       <!-- Optionally, you can add icons to the links -->
       <li class="active"><a href="<?=base_url()?>"><i class="fa fa-dashboard"></i> <span>Dashboard</span></a></li>
+			<li><a href="<?=base_url('/admin/person')?>"><i class="fa fa-users"></i> <span>Person</span></a></li>
       <li><a href="#"><i class="fa fa-link"></i> <span>Link</span></a></li>
      <li class="treeview" style="height: auto;">
           <a href="#">
